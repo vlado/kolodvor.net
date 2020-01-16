@@ -45,4 +45,4 @@ exclude:
   - docs
   - Gemfile
   - Gemfile.lock
-  - Procfille
+  - Procfile
