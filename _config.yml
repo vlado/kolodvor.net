@@ -23,7 +23,7 @@ email: vlado@cingel.hr
 description: >- # this means to ignore newlines until "baseurl:"
   ruby, rails, javascript, ...
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.kolodvor.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: vladocingel
 github_username:  vlado
 
