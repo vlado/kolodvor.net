@@ -3,19 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Webkit placeholder attribute behavior | kolodvor</title>
+<title>Set focus on first field with PrototypeJS | kolodvor</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Webkit placeholder attribute behavior" />
+<meta property="og:title" content="Set focus on first field with PrototypeJS" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="As you probably notice, placeholder behavior has changed in the latest versions of Webkit (Safari and Chrome). If you don’t like it you can have old behavior back with a simple CSS rule" />
-<meta property="og:description" content="As you probably notice, placeholder behavior has changed in the latest versions of Webkit (Safari and Chrome). If you don’t like it you can have old behavior back with a simple CSS rule" />
-<link rel="canonical" href="http://localhost:4000/javascript/2012/03/23/webkit-placeholder-attribute-behaviour.html" />
-<meta property="og:url" content="http://localhost:4000/javascript/2012/03/23/webkit-placeholder-attribute-behaviour.html" />
+<meta name="description" content="If you are using jQuery see this post." />
+<meta property="og:description" content="If you are using jQuery see this post." />
+<link rel="canonical" href="http://localhost:4000/javascript/prototypejs/2010/01/02/set-focus-on-first-field-with-prototype.html" />
+<meta property="og:url" content="http://localhost:4000/javascript/prototypejs/2010/01/02/set-focus-on-first-field-with-prototype.html" />
 <meta property="og:site_name" content="kolodvor" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2012-03-23T16:13:34+01:00" />
+<meta property="article:published_time" content="2010-01-02T15:32:02+01:00" />
 <script type="application/ld+json">
-{"headline":"Webkit placeholder attribute behavior","dateModified":"2012-03-23T16:13:34+01:00","datePublished":"2012-03-23T16:13:34+01:00","url":"http://localhost:4000/javascript/2012/03/23/webkit-placeholder-attribute-behaviour.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/javascript/2012/03/23/webkit-placeholder-attribute-behaviour.html"},"description":"As you probably notice, placeholder behavior has changed in the latest versions of Webkit (Safari and Chrome). If you don’t like it you can have old behavior back with a simple CSS rule","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"headline":"Set focus on first field with PrototypeJS","dateModified":"2010-01-02T15:32:02+01:00","datePublished":"2010-01-02T15:32:02+01:00","url":"http://localhost:4000/javascript/prototypejs/2010/01/02/set-focus-on-first-field-with-prototype.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/javascript/prototypejs/2010/01/02/set-focus-on-first-field-with-prototype.html"},"description":"If you are using jQuery see this post.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="kolodvor" /></head>
 <body><header class="site-header" role="banner">
@@ -38,21 +38,24 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Webkit placeholder attribute behavior</h1>
+    <h1 class="post-title p-name" itemprop="name headline">Set focus on first field with PrototypeJS</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2012-03-23T16:13:34+01:00" itemprop="datePublished">Mar 23, 2012
+      <time class="dt-published" datetime="2010-01-02T15:32:02+01:00" itemprop="datePublished">Jan 2, 2010
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>As you probably notice, placeholder behavior has changed in the latest versions of Webkit (Safari and Chrome). If you don’t like it you can have old behavior back with a simple CSS rule</p>
+    <p>If you are using jQuery see <a href="/javascript/jquery/2008/01/17/set-focus-on-first-field-with-jquery.html">this</a> post.</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">input</span><span class="p">:</span><span class="nx">focus</span><span class="p">::</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">input</span><span class="o">-</span><span class="nx">placeholder</span><span class="p">,</span> <span class="nx">textarea</span><span class="p">:</span><span class="nx">focus</span><span class="p">::</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">input</span><span class="o">-</span><span class="nx">placeholder</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span><span class="nx">transparent</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<p>To set focus on first text field with Prototype I prefer something like this</p>
 
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">  <span class="kd">var</span> <span class="nx">firstField</span> <span class="o">=</span> <span class="nx">$$</span><span class="p">(</span><span class="dl">'</span><span class="s1">input:text:visible</span><span class="dl">'</span><span class="p">).</span><span class="nx">first</span><span class="p">();</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">firstField</span><span class="p">)</span>
+    <span class="nx">firstField</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span></code></pre></figure>
 
-  </div><a class="u-url" href="/javascript/2012/03/23/webkit-placeholder-attribute-behaviour.html" hidden></a>
+<p>but you can also try with <a href="http://api.prototypejs.org/dom/Form/focusFirstElement/">Form.focusFirstElement</a> or <a href="http://api.prototypejs.org/dom/Form/findFirstElement/">Form.findFirstElement</a></p>
+
+  </div><a class="u-url" href="/javascript/prototypejs/2010/01/02/set-focus-on-first-field-with-prototype.html" hidden></a>
 </article>
 
       </div>
