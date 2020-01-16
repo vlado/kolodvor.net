@@ -1,6 +1,7 @@
 rm -rf docs
 mkdir docs
 cp -r _site/* docs
+echo "www.kolodvor.net" > docs/CNAME
 git add .
 git commit -m "New release"
 git push origin master

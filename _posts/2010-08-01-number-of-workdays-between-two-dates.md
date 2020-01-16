@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Number of workdays between two dates"
-date:   2010-08-01 23:55:34 +0100
+date:   2010-08-01 22:55:34 +0100
 categories: ruby
 ---
 
