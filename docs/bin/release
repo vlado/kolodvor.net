@@ -1,6 +1,0 @@
-rm -rf docs
-mkdir docs
-cp -r _site/* docs
-git add .
-git commit -m "New release"
-git push origin master
